@@ -1,0 +1,505 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    background-color: black;
+}
+
+.clear{
+    clear:both;
+}
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    border-left: 2px solid rebeccapurple;
+    border-right: 2px solid rebeccapurple;
+    background-color: white;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+/*---- HEADER ----*/
+
+header{
+    background-color:rebeccapurple;
+    height: 80px;
+    width: 100%;
+}
+
+header .container{
+    background-color:rebeccapurple;
+}
+
+div.logo{
+    background-image:url('../images/logo.jpg');/*IMG FOR LOGO*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    letter-spacing: 1.4px;
+}
+
+.logo h2{
+    color:white;
+    position: relative;
+    width: 170px;
+    left: 90px;
+    top: 20px;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.logo h2 span{
+    color:rgb(114, 1, 114);
+    text-shadow: 3px 2px 2px white; 
+    font-size: 35px;
+}
+
+header nav.desktop{
+    height: 80px;
+    float: right;
+}
+
+header nav.desktop ul{
+    line-height: 80px;
+}
+
+header nav.desktop ul li{
+    display: inline-block;
+    margin: 0px 10px 0px 10px;
+}
+
+header nav.desktop ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+header nav.desktop ul li a:hover{
+    text-decoration: underline;
+}
+
+header nav.desktop ul li a.login{
+    background-color: red;
+    padding: 10px 15px 10px 15px;
+    border-radius: 15px;
+}
+
+/*---- HEADER MOBILE ----*/
+
+header nav.mobile{
+    display: none;
+}
+
+header nav.mobile ul{
+    display: none;
+}
+
+/*---- SECTION SLIDER ----*/
+
+.slider{
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    height: 80%;
+    max-height: 768px;
+    /*background-color: #ccc; FOR DEBBUGING*/
+    margin: 0 auto;
+}
+
+.slider img{
+    display: none;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+/*SECTION PRODUTOS*/
+
+.red{
+    color: red;
+    font-weight: bold;
+}
+
+.green{
+    color: green;
+    font-weight: bold;
+}
+
+section.produtos .container > h2{
+    text-align:center;
+    font-size: 30px;
+    background-color:rebeccapurple;
+    padding: 10px;
+    color: white;
+}
+
+.side-bar{
+    width: 30%;
+    /*background-color: #ccc; FOR DEBBUGING*/
+    height: 1500px;
+    float: left;
+}
+
+.vitrine{
+    width: 100%;
+    /*background-color: #ccc; FOR DEBBUGING*/
+    height: 500px;
+}
+
+.search1 h2{
+	font-size: 27px;
+	color: black;
+	font-weight: normal;
+    text-align:center;
+    color: white;
+}
+
+.search1 .barra-preco{
+	width: 80%;
+	height: 20px;
+	background: white;
+	border:1px solid #ccc;
+	margin-top:8px;
+	border-radius: 20px;
+	position: relative;
+    margin: 0 auto;
+}
+
+.barra-preco-fill{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0%;
+	height: 20px;
+	border-radius: 20px;
+	background:linear-gradient(to bottom,rgb(255,255,255),rgb(200,200,200));
+}
+
+.pointer-barra{
+	width: 26px;
+	height: 26px;
+	position: absolute;
+	left: 0px;
+	top: -3px;
+	cursor: pointer;
+	border-radius: 8px;
+	background:linear-gradient(to bottom,rgb(255,255,255),rgb(180,180,180));
+	border:1px solid  #777;
+}
+
+.valor-pesquisa{
+	margin-top:8px;
+}
+
+.valor-pesquisa p{
+	color: black;
+	font-size: 15px;
+}
+
+.valor-pesquisa p:nth-of-type(1){
+	float: left;
+}
+
+.valor-pesquisa p:nth-of-type(2){
+	float: right;
+}
+
+.search2{
+	margin-top:40px;
+    margin-left: 20px;
+}
+
+.search2 h2{
+	font-size: 24px;
+	color: white;
+	font-weight: normal;
+}
+
+.form-venda-wraper{
+	margin-top:10px;
+}
+
+.form-venda-wraper input[type=checkbox]{
+	display: none;
+}
+
+.form-venda-wraper label{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	border:1px solid #ccc;
+	border-radius: 3px;
+	vertical-align: top;
+	cursor: pointer;
+	position: relative;
+}
+
+
+.circle{
+	width: 8px;
+	height: 8px;
+	display: none;
+	border-radius: 4px;
+	background: black;
+	position: absolute;
+	left: 6px;
+	top: 6px;
+}
+
+
+.form-venda-wraper input[type=checkbox]:checked + label > .circle{
+	display: block;
+}
+
+.form-venda-wraper span{
+	padding:0 10px;
+	display: inline-block;
+	vertical-align: top;
+    font-size: 20px;
+}
+
+.vitrine-destaque {
+    float: left;
+    width: 22%;
+    height: 600px;
+    text-align: left;
+}
+
+.vitrine-destaque .pc-img{
+	width: 100%;
+	padding-top: 100%;
+	border:8px solid white;
+	background-size: 100% 100%;
+}
+
+.vitrine-destaque h2{
+	padding-left: 8px;
+	color: black;
+	font-style: italic;
+	font-size: 16px;
+    width: 80%;
+}
+
+.vitrine-destaque p{
+	padding-top: 8px;
+	padding-left: 8px;
+	color: #353535;
+	font-size: 15px;
+	font-style: italic;
+}
+
+
+.btn1{
+	text-align: center;
+	display: block;
+	line-height: 40px;
+	background-color:#EB2D2D;
+	text-decoration: none;
+	border-bottom: 5px solid #B21E1E;
+	color: white;
+	font-size: 16px;
+	font-style: italic;
+	width: 150px;
+}
+
+.vitrine-destaque a{
+	margin-left: 8px;
+	margin-top:10px;
+
+}
+
+.line{
+    text-decoration: line-through;
+}
+
+/*SECTION CONTATO*/
+section.contato .container h2{
+    text-align: center;
+    color: white;
+    background-color: rebeccapurple;
+    padding: 10px;
+}
+
+section.contato form{
+	max-width: 600px;
+	margin:0 auto;
+    padding: 30px;
+}
+
+section.contato .input-wraper{
+	float: left;
+	padding:10px;
+	margin-top:7px;
+}
+
+section.contato input[type=text]{
+	width: 100%;
+	border: 1px solid #ccc;
+	height: 60px;
+	font-size: 16px;
+	line-height: 40px;
+	padding-left: 15px;
+}
+
+section.contato textarea{
+	font-size: 18px;
+	width: 100%;
+	border:1px solid #ccc;
+	height: 140px;
+	padding:8px;
+	resize: none;
+}
+
+section.contato form .input-wraper:nth-of-type(5){
+	text-align: center;
+}
+
+section.contato input[type=submit]{
+	border-right: 0;
+	border-left: 0;
+	border-top: 0;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.w100{
+	width: 100%;
+}
+
+.w50{
+	width: 50%;
+}
+
+
+/*SECTION FOOTER*/
+
+footer{
+    text-align:center;
+    background-color: rebeccapurple;
+    color: white;
+    line-height: 30px;
+    font-size: 20px;
+    padding: 30px 0;
+}
+
+footer .container{
+    background-color: rebeccapurple;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width:1024px){
+    .slider img{
+        width: 800px;
+        height: 600px;
+        left:50%;
+        top:42%;
+    }
+}
+
+@media screen and (max-width:768px){
+    header nav.desktop{
+        display:none;
+    }
+
+    header nav.mobile{
+        display:block;
+    }
+
+    .side-bar{
+        width: 70%;
+        /*background-color: #ccc; FOR DEBBUGING*/
+        height: 500px;
+        float: none;
+        margin: 0 auto;
+    }
+    
+    .vitrine{
+        width: 100%;
+        /*background-color: #ccc; FOR DEBBUGING*/
+        height: 500px;
+    }
+
+    .vitrine-destaque {
+        float: left;
+        width: 50%;
+        height: 600px;
+        text-align: left;
+    }
+    
+    .vitrine-destaque .pc-img{
+        width: 100%;
+        padding-top: 100%;
+        border:8px solid white;
+        background-size: 100% 100%;
+    }
+
+    .w50{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:650px){
+    .slider img{
+        width: 640px;
+        height: 480px;
+        left:50%;
+        top:50%;
+    }
+
+    .slider{
+        position: relative;
+        width: 100%;
+        max-width: 1024px;
+        height: 50%;
+        max-height: 768px;
+        /*background-color: #ccc; FOR DEBBUGING*/
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:450px){
+    .slider img{
+        width: 320px;
+        height: 240px;
+        left:50%;
+        top:50%;
+    }
+
+    .slider{
+        position: relative;
+        width: 100%;
+        max-width: 1024px;
+        height: 25%;
+        max-height: 768px;
+        /*background-color: #ccc; FOR DEBBUGING*/
+        margin: 0 auto;
+    }
+
+    .side-bar{
+        width: 70%;
+        /*background-color: #ccc; FOR DEBBUGING*/
+        height: 600px;
+        float: none;
+        margin: 0 auto;
+    }
+
+}
+

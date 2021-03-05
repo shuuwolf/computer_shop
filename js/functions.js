@@ -210,4 +210,28 @@ $(function(){
         $("body").css("-0-user-select","auto");
         $("body").css("user-select","auto");
     }
+
+    /* Clicar e ir para a div contato com base no atributo goto */
+
+    var directory = '../'
+
+    $('[goto=contato]').click(function(){
+        location.href=directory+'index.html?contato';
+        return false;
+    })
+
+    checkUrl();
+
+    function checkUrl(){
+        var url = location.href.split('/');
+        var curPage = url[url.length-1].split('?');
+
+        if(curPage[1] != undefined && curPage[1] == 'contato'){
+            $('html,body').animate({'scrollTop':$('#contato').offset().top});
+        }
+    }
+
+    $('nav.mobile').click(function(){
+        $('nav.mobile ul').slideToggle();
+    })
 })
